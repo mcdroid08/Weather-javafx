@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.Controller">
+   <top>
+      <AnchorPane fx:id="header" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #eee;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <JFXTextField fx:id="searchBox" focusColor="#228044" labelFloat="true" maxHeight="-Infinity" maxWidth="500.0" onAction="#searchLocation" prefWidth="300.0" promptText="Search location">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fx:id="weatherIcon" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/sun.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="7.0" top="45.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="locationLab" text="Delhi, India">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label fx:id="lastUpdateLab" layoutX="71.0" layoutY="82.0" text="Updated at 12:34 AM" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0" />
+            <JFXProgressBar fx:id="progressBar" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+         <effect>
+            <DropShadow color="#847e7e" />
+         </effect>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="232.0" prefWidth="1201.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="143.0" prefWidth="800.0" spacing="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox fx:id="tempTile" alignment="CENTER" prefHeight="120.0" prefWidth="120.0">
+                     <children>
+                        <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/hot.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="-10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="tempTileLab" text="31 C">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Tempreature" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="visiblityTile" alignment="CENTER" layoutX="35.0" layoutY="10.0" prefHeight="120.0" prefWidth="120.0">
+                     <children>
+                        <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/eye.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="visiblityTileLab" text="16 km">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Visiblity" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="humidityTile" alignment="CENTER" layoutX="155.0" layoutY="10.0" prefHeight="120.0" prefWidth="120.0">
+                     <children>
+                        <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/humidity.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="humidityTileLab" text="45 %">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Humidity" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="windTile" alignment="CENTER" layoutX="276.0" layoutY="10.0" prefHeight="120.0" prefWidth="120.0">
+                     <children>
+                        <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/blowing.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="windTileLab" text="3km/h NW">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Wind" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="uvTile" alignment="CENTER" layoutX="397.0" layoutY="10.0" prefHeight="137.0" prefWidth="121.0">
+                     <children>
+                        <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/uv-index.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label fx:id="uvTileLab" text="Strong">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="UltraVoilet" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="25.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

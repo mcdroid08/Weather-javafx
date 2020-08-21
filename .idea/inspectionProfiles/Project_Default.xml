@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="MisspelledHeader" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="CUSTOM_HEADERS">
+        <header value="--add-exports=javafx.base/com.sun.javafx.event=com.jfoenix" />
+        <header value="--add-exports=javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix" />
+        <header value="--add-exports=javafx.controls/com.sun.javafx.scene.control.inputmap=ALL-UNNAMED" />
+        <header value="--add-exports=javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED" />
+        <header value="--add-exports=javafx.controls/com.sun.javafx.scene.control=com.jfoenix" />
+        <header value="--add-exports=javafx.graphics/com.sun.javafx.scene.text=com.jfoenix" />
+        <header value="--add-exports=javafx.graphics/com.sun.javafx.scene=com.jfoenix" />
+        <header value="java.desktop/sun.awt.shell=ALL-UNNAMED --add-exports" />
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: ui.main.App
+java.desktop/sun.awt.shell=ALL-UNNAMED --add-exports
+
+--add-exports=javafx.graphics/com.sun.javafx.scene=com.jfoenix
+--add-exports=javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix
+--add-exports=javafx.controls/com.sun.javafx.scene.control=com.jfoenix
